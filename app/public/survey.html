@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Friend Finder - Naruto Version</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+</head>
+
+<body>
+  
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <div class="row center">
+        <h1 class="header col s12 light">Survey Questions</h1>
+        <h3 class="header col s12 light">Please answer the questions below as honestly as possible for the most accurate results</h3>        
+      </div>
+
+
+      <div class="row">
+        <div class="survey-container col m12 light">
+          
+          <form id="survey-form" class="col s12">
+            <div class="row">
+
+              <div class="input-field col s6">
+                <input id="friend_name" type="text" class="validate">
+                <label id="lbl_friend_name" for="friend_name" data-error="This field is required!">First Name</label>
+              </div>
+
+              <div class="input-field col s6">
+                <input id="profile_img" type="url" class="validate">
+                <label id="lbl_profile_img" for="profile_img" data-error="Please enter valid URL">Image URL</label>
+              </div>
+
+            </div>
+
+            <div class="row">
+              <div class="input-field col s12">
+                <textarea id="description" class="materialize-textarea validate"></textarea>
+                <label id="lbl_description" for="description" data-error="This field is required!">Description</label>
+              </div>
+            </div>
+
+            <div class="row row-1">
+              <div class="input-field col s6">
+                <h3>Question 1</h3>
+                <h5>In general, how happy/pleasant is your personality?</h5>
+                <select id="q1" class="question q1 validate">
+                  <option value="" disabled selected>Choose your option</option>
+                  <option value="1">1 - Miserable</option>
+                  <option value="2">2</option>
+                  <option value="3">3 - Generally Happy</option>
+                  <option value="4">4</option>
+                  <option value="5">5 - Super Bubbly!</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row row-2">
+              <div class="input-field col s6">
+                <h3>Question 2</h3>
+                <h5>How troublesome were you as a child?</h5>
+                <select id="q2" class="question q2">
+                  <option value="" disabled selected>Choose your option</option>
+                  <option value="1">1 - Not at all!</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 - Constantly troublesome</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row row-3">
+              <div class="input-field col s6">
+                <h3>Question 3</h3>
+                <h5>You love meeting new people and easily make them your friends?</h5>
+                <select id="q3" class="question q3">
+                  <option value="" disabled selected>Choose your option</option>
+                  <option value="1">1 - Strongly Disagree</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 - Strongly Agree</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row row-4">
+              <div class="input-field col s6">
+                <h3>Question 4</h3>
+                <h5>How hard-working are you?</h5>
+                <select id="q4" class="question q4">
+                  <option value="" disabled selected>Choose your option</option>
+                  <option value="1">1 - Super Lazy</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 - Extremely Hardworking</option>
+                </select>
+              </div>
+            </div>
+
+              
+            <div class="row row-5">
+              <div class="input-field col s6">
+                <h3>Question 5</h3>
+                <h5>Whenever you work in teams, you love to be the leader!</h5>
+                <select id="q5" class="question q5">
+                  <option value="" disabled selected>Choose your option</option>
+                  <option value="1">1 - Never!</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 - I was born to lead!</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row row-6">
+              <div class="input-field col s6">
+                <h3>Question 6</h3>
+                <h5>You always do what's best for the greater good, rather than looking out for yourself?</h5>
+                <select id="q6" class="question q6">
+                  <option value="" disabled selected>Choose your option</option>
+                  <option value="1">1 - Never</option>
+                  <option value="2">2</option>
+                  <option value="3">3 - Sometimes </option>
+                  <option value="4">4</option>
+                  <option value="5">5 - Always</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row row-7">
+              <div class="input-field col s6">
+                <h3>Question 7</h3>
+                <h5>As a person, how evil would you rate yourself?</h5>
+                <select id="q7" class="question q7">
+                  <option value="" disabled selected>Choose your option</option>
+                  <option value="1">1 - I am an angel!</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 - I am the devil!</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row row-8">
+              <div class="input-field col s6">
+                <h3>Question 8</h3>
+                <h5>You believe no amount of hard work can beat natural talent</h5>
+                <select id="q8" class="question q8">
+                  <option value="" disabled selected>Choose your option</option>
+                  <option value="1">1 - Strongly Disagree - hard work always pays off!</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 - Strongly Agree!</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row row-9">
+              <div class="input-field col s6">
+                <h3>Question 9</h3>
+                <h5>You like to plan out your actions before I go about them</h5>
+                <select id="q9" class="question q9">
+                  <option value="" disabled selected>Choose your option</option>
+                  <option value="1">1 - No thinking, only action!</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 - I make a complete picture of everything in my mind before I do anything</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row row-10">
+              <div class="input-field col s6">
+                <h3>Question 10</h3>
+                <h5>You love being around animals/having pets around you all the time!</h5>
+                <select id="q10" class="question q10">
+                  <option value="" disabled selected>Choose your option</option>
+                  <option value="1">1 - Strongly Disagree</option>
+                  <option value="2">2</option>
+                  <option value="3">3 - Sometimes</option>
+                  <option value="4">4</option>
+                  <option value="5">5 - Strongly Agree</option>
+                </select>
+              </div>
+            </div>
+            
+            <button id="btn-submit" class="btn submit waves-effect waves-light" type="submit">Submit
+              <i class="material-icons right">send</i>
+            </button>
+            
+          </form>
+          
+        </div>
+      </div>
+      
+      <br><br>
+
+    </div>
+  </div>
+
+
+  <footer class="page-footer orange">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Company Bio</h5>
+          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Settings</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Structure -->
+  <div id="matches-modal" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <div class="modal-header center-align">
+        <h4>You Matched</h4>
+      </div><br>
+      <div id="modal-body">
+        
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" id="btnOK" class="modal-action modal-close waves-effect waves-green btn-flat ">OK</a>
+    </div>
+  </div>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.js"></script>
+
+  <script type="text/javascript">
+    
+    // Initialize materialize select 
+    $(document).ready(function() {
+      $('select').material_select();
+
+       $('.modal').modal({
+          dismissible: true, // Modal can be dismissed by clicking outside of the modal
+          opacity: .5, // Opacity of modal background
+          inDuration: 300, // Transition in duration
+          outDuration: 200, // Transition out duration
+          startingTop: '4%', // Starting top style attribute
+          endingTop: '10%', // Ending top style attribute
+          // ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
+          //   alert("Ready");
+          //   console.log(modal, trigger);
+          // },
+          // complete: function() { alert('Closed'); } // Callback for Modal close
+        });
+            
+       //$("#matches-modal").modal('open');
+    });
+
+
+    // Form Submit
+    $("#survey-form").on("submit", function(e){
+
+      e.preventDefault();
+
+      // $(".question").each(function(index, el) {
+      //   console.log(el.options[el.selectedIndex].value);
+      //   scoreArr.push(this.options[this.selectedIndex].value);
+      // });
+
+
+      // ====================== Custom form validation ========================
+      if ($("#friend_name").val() === "") {
+        $("#friend_name").addClass('invalid');
+        $("#lbl_friend_name").attr('data-error', 'This field is required!');
+
+        $("#btn-submit").addClass('animated shake');
+        setTimeout(() => {
+          $("#btn-submit").removeClass('animated shake');
+          $("#friend_name").focus();
+        }, 1000);
+
+        return false;
+      }
+
+      if ($("#profile_img").val() === "") {
+        $("#profile_img").addClass('invalid');
+        $("#lbl_profile_img").attr('data-error', 'This field is required!');
+
+        $("#btn-submit").addClass('animated shake');
+        setTimeout(() => {
+          $("#btn-submit").removeClass('animated shake');
+          $("#profile_img").focus();
+        }, 1000);
+
+        return false;
+      }
+
+      if ($("#description").val() === "") {
+        $("#description").addClass('invalid');
+        $("#lbl_description").attr('data-error', 'This field is required!');
+
+        $("#btn-submit").addClass('animated shake');
+        setTimeout(() => {
+          $("#btn-submit").removeClass('animated shake');
+          $("#description").focus();
+        }, 1000);
+
+        return false;
+      }
+
+
+      var newFriend = {
+        friendName: $("#friend_name").val().trim(),
+        friendImage: $("#profile_img").val().trim(),
+        friendDesc: $("#description").val().trim(),
+        scores: [
+          $("#q1").val().trim(),
+          $("#q2").val().trim(),
+          $("#q3").val().trim(),
+          $("#q4").val().trim(),
+          $("#q5").val().trim(),
+          $("#q6").val().trim(),
+          $("#q7").val().trim(),
+          $("#q8").val().trim(),
+          $("#q9").val().trim(),
+          $("#q10").val().trim()
+        ]
+      };
+
+      console.log('Posting new friend:');
+      console.log(newFriend);
+
+      var currentURL = window.location.origin;
+
+      // AJAX POST to send newFriend form data to backend server and route 'api/friends'
+      $.post(currentURL + '/api/friends', newFriend, function(data) {
+        /*optional stuff to do after success */
+        console.log(data);
+
+        $("#modal-body").empty();
+        for (var i = 0; i < data.length; i++) {
+          var modalDiv = $("<div class='row'><div class='col s6'><h5>"
+            + data[i].friendName + "</h5><hr><p>" + data[i].friendDesc
+            + "</p></div><div class='col s6'><img src='" + data[i].friendImage
+            + "'></div></div>");
+
+          $("#modal-body").append(modalDiv);
+        }
+
+
+        $("#matches-modal").modal('open');
+        
+        $("#btnOK").on("click", function() {
+          $("#matches-modal").modal('close');
+        });
+      });
+
+
+    });
+
+  </script>
+
+  </body>
+</html>
