@@ -18,8 +18,7 @@ module.exports = (app) => {
 		// Set default difference 
 		var minDiff = 100;
 
-		// var matchFriendName = '';
-		// var matchFriendImage = '';
+		// Array to hold matches
 		var matchArr = [];
 
 		//================== Determine Compatibility ===================
@@ -39,10 +38,6 @@ module.exports = (app) => {
 
 				// console.log(minDiff);
 				// console.log(friendsData[i]);
-
-				// Set the matched friends name and profile image to send back to client-side
-				//matchFriendName = friendsData[i].friendName;
-				//matchFriendImage = friendsData[i].friendImage;
 			}
 			else if (currentDiff === minDiff) {
 				// Only show top 3 friends with same 'minDiff' values
@@ -52,13 +47,15 @@ module.exports = (app) => {
 			}
 		}
 
+		// Add new friend into our list of friends
+		//friendsData.push(newFriend);
+
 		// Respond back with json data of matching friend info
 		res.send(matchArr);
-
 	});
 }
 
-
+//=================== Compatibility Logic Pseudocode ====================
 //loop through friendsData array
 
 //for each object
@@ -66,6 +63,10 @@ module.exports = (app) => {
 	// get sum of the differences
 	// compare sum with minimumTotalDiff
 
-// lowest sum wins -> matched friend
+// if sum < minimumTotalDiff
+	// clear 'matched' array
+	// add to 'matched' array
+// if sum = minimumTotalDiff
+	// add to 'matched' array
 
 

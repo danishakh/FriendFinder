@@ -170,7 +170,7 @@
             <div class="row row-9">
               <div class="input-field col s6">
                 <h3>Question 9</h3>
-                <h5>You like to plan out your actions before I go about them</h5>
+                <h5>You like to plan out your actions before you go about them</h5>
                 <select id="q9" class="question q9">
                   <option value="" disabled selected>Choose your option</option>
                   <option value="1">1 - No thinking, only action!</option>
@@ -215,28 +215,12 @@
   <footer class="page-footer orange">
     <div class="container">
       <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
-
-
-        </div>
+        
         <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
+          <h5 class="white-text">Links</h5>
           <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
+            <li><a class="white-text" href="/api/friends">API Friends List</a></li>
+            <li><a class="white-text" href="https://github.com/danishakh/FriendFinder">GitHub Repo</a></li>
           </ul>
         </div>
       </div>
@@ -249,7 +233,7 @@
   </footer>
 
   <!-- Modal Structure -->
-  <div id="matches-modal" class="modal modal-fixed-footer">
+  <div id="matches-modal" class="col s10 modal modal-fixed-footer">
     <div class="modal-content">
       <div class="modal-header center-align">
         <h4>You Matched</h4>
@@ -274,7 +258,7 @@
     $(document).ready(function() {
       $('select').material_select();
 
-       $('.modal').modal({
+        $('.modal').modal({
           dismissible: true, // Modal can be dismissed by clicking outside of the modal
           opacity: .5, // Opacity of modal background
           inDuration: 300, // Transition in duration
@@ -287,6 +271,9 @@
           // },
           // complete: function() { alert('Closed'); } // Callback for Modal close
         });
+
+        $('.parallax').parallax();
+        
             
        //$("#matches-modal").modal('open');
     });
@@ -381,7 +368,6 @@
 
           $("#modal-body").append(modalDiv);
         }
-
 
         $("#matches-modal").modal('open');
         
